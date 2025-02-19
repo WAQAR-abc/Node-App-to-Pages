@@ -7,7 +7,7 @@ var vite_config_default = defineConfig({
     environment: "jsdom",
     setupFiles: ["./vitest.setup.js"]
   },
-  base: "/react-ciccd-actions/"
+  base: "/Node-App-to-Pages/"
 });
 export {
   vite_config_default as default
