@@ -20,16 +20,15 @@ jobs:
          sudo systemctl status nginx
          cd /etc/nginx/sites-available
          ls 
-         cat default
-         cd /var/www/html | sudo rm -rf *.html
-         cd 
+         pwd
+         sudo rm -rf /var/www/html/*.html
          cp index.html /var/www/html
          sudo systemctl restart nginx
          echo "===================================================="
          curl http://localhost:80 >> output.txt
          cat output.txt
-    
 
+    - uses: actions/upload-artifact@v4.6.1
+      with:
+        path: './output.txt'
     
-
-  
